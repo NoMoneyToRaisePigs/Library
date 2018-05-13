@@ -1,0 +1,58 @@
+
+@import (reference) "../../../Content/variable.less";
+
+@font-family-base: NotoSans;
+    
+
+    button {
+        cursor: pointer;
+        width: 100%;
+        min-height: @btn-min-height;
+        padding: 0px @padding-lg;
+        border-radius: @btn-border-radius;
+        font-size: @font-size-md;
+        font-family: @font-family-base;
+        font-weight: @btn-font-weight;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        align-self: center;
+        border: none;
+
+        &.default {
+            color: @grey-300;
+            border: 2px solid @grey-300;
+            background-color: @white;
+        }
+
+        &.primary {
+            color: @white;
+            background-color: @brand-primary;
+        }
+
+        &.is-disabled {
+            cursor: not-allowed;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: @white !important;
+            background-color: @btn-disabled !important;
+        }
+    }
+
+
+    &:hover {
+        button {
+            color: @white;
+            background-color: @btn-primary-background-hover;
+            border: none;
+        }
+    }
+
+    &:active {
+        button {
+            color: @white;
+            background-color: @btn-primary-background-active;
+            border: none;
+        }
+    }
+

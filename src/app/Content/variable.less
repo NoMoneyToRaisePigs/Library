@@ -1,0 +1,501 @@
+/***************************************Fonts********************************/
+@font-family-base: 'NotoSans', sans-serif;
+
+@font-size-xxs: 11px;
+@font-size-xs: 12px;
+@font-size-sm: 14px;
+@font-size-md: 16px;
+@font-size-lg: 18px;
+@font-size-xl: 20px;
+@font-size-xxl: 26px;
+@font-size-xxxl: 30px;
+
+/************************************Fonts-Weight*****************************/
+@font-weight-300: 300;
+@font-weight-600: 600;
+
+/************************************Line-height******************************/
+@line-height-xs: 14px;
+@line-height-sm: 16px;
+@line-height-md: 18px;
+@line-height-lg: 20px;
+@line-height-xl: 24px;
+@line-height-xxl: 32px;
+@line-height-xxxl: 36px;
+@line-height-xxxxl: 48px;
+
+/**************************************Padding********************************/
+@padding-xs: 4px;
+@padding-sm: 8px;
+@padding-md: 12px;
+@padding-lg: 16px;
+@padding-xl: 20px;
+@padding-xxl: 24px;
+@padding-xxxl: 32px;
+@padding-xxxxl: 48px;
+
+/**************************************Margins********************************/
+@margin-xs: 4px;
+@margin-sm: 8px;
+@margin-md: 12px;
+@margin-lg: 16px;
+@margin-xl: 20px;
+@margin-xxl: 24px;
+@margin-xxxl: 32px;
+@margin-xxxxl: 48px;
+
+/***************************************Fade**********************************/
+@fadeout-start-colour: rgba(76, 68, 52, 0.45);
+@fadeout-end-colour: rgba(76, 68, 52, 0);
+
+/****************************************Body*********************************/
+@body-font-size-base: @font-size-md;
+@body-line-height-base: @line-height-xl;
+
+@body-font-size-mobile: @font-size-sm;
+@body-line-height-mobile: 22px;
+
+/***************************************Grid*********************************/
+@content-max-width: 1600px;
+@desktop-min-width: 1201px;
+@tablet-max-width: 1200px;
+@tablet-min-width: 481px;
+@mobile-max-width: 480px;
+
+/***************************************Colors*******************************/
+@brand-primary: #3672e2;
+@brand-primary-hover: #4787ff;
+@brand-primary-active: #2c60c3;
+
+@brand-danger: #ff0000;
+@brand-danger-dark: #d0021b;
+@brand-warning: #F2A416;
+@white: #ffffff;
+@black: #000000;
+
+@grey-50: #f2f7f7;
+@grey-100: #dfe5e6;
+@grey-200: #c9d2d4;
+@grey-300: #aab1b3;
+@grey-400: #919899;
+@grey-500: #797f80;
+@grey-600: #616566;
+@grey-700: #494c4d;
+@grey-800: #303333;
+@grey-900: #18191a;
+
+@bg-grey-01: #f5f5f5;
+@bg-grey-02: #f0f0f0;
+@bg-grey-03: #ebebeb;
+@bg-grey-04: #e6e6e6;
+@bg-grey-05: #e0e0e0;
+@bg-grey-06: #dbdbdb;
+@bg-grey-07: #d6d6d6;
+@bg-grey-08: #d1d1d1;
+
+@chartcolour-1: #d50076;
+@chartcolour-2: #b80074;
+@chartcolour-3: #7e1874;
+@chartcolour-4: #511e6f;
+@chartcolour-5: #352275;
+@chartcolour-6: #1655a5;
+@chartcolour-7: #1c77c2;
+@chartcolour-8: #0092d4;
+@chartcolour-9: #149160;
+@chartcolour-10: #53aa27;
+@chartcolour-11: #a5c700;
+@chartcolour-12: #e5dd07;
+@chartcolour-13: #fcd200;
+@chartcolour-14: #f89a00;
+@chartcolour-15: #f06e00;
+@chartcolour-16: #e53d07;
+@chartcolour-base: #999999;
+
+@client-colour-1: #21a2a3;
+@client-colour-2: #76B247;
+@client-colour-3: #329A89;
+@client-colour-4: #4C8CBC;
+@client-colour-5: #991A37;
+@client-colour-6: #CC6601;
+@client-colour-7: #0E5636;
+@client-colour-8: #76B247;
+@client-colour-9: #329A89;
+@client-colour-10: #4C8CBC;
+
+@brandcolour-50: lighten(@client-colour-1, 90%);
+@brandcolour-100: lighten(@client-colour-1, 80%);
+@brandcolour-200: lighten(@client-colour-1, 60%);
+@brandcolour-300: lighten(@client-colour-1, 40%);
+@brandcolour-400: lighten(@client-colour-1, 20%);
+@brandcolour-500: @client-colour-1;
+@brandcolour-600: darken(@client-colour-1, 10%);
+@brandcolour-700: darken(@client-colour-1, 20%);
+@brandcolour-800: darken(@client-colour-1, 30%);
+@brandcolour-900: darken(@client-colour-1, 40%);
+
+/***************************************Headings******************************/
+@h1-font-size-base: 36px;
+@h1-line-height-base: 42px;
+@h1-font-size-tablet: 32px;
+@h1-line-height-tablet: 38px;
+@h1-font-size-mobile: 24px;
+@h1-line-height-mobile: 30px;
+
+@h2-font-size-base: 26px;
+@h2-line-height-base: 32px;
+@h2-font-size-tablet: 24px;
+@h2-line-height-tablet: 30px;
+@h2-font-size-mobile: 22px;
+@h2-line-height-mobile: 28px;
+
+@h3-font-size-base: 22px;
+@h3-line-height-base: 28px;
+@h3-font-size-mobile: @font-size-xl;
+@h3-line-height-mobile: 26px;
+
+@h4-font-size-base: @font-size-lg;
+@h4-line-height-base: @line-height-xl;
+@h4-font-size-mobile: @font-size-md;
+
+@h5-font-size-base: @font-size-md;
+@h5-line-height-base: @line-height-xl;
+@h5-font-size-mobile: @font-size-sm;
+@h5-line-height-mobile: 22px;
+
+@h6-font-size-base: @font-size-md;
+@h6-line-height-base: @line-height-xl;
+@h6-font-size-mobile: @font-size-sm;
+@h6-line-height-mobile: 22px;
+
+/***************************************Links*********************************/
+@link-color-base: @brand-primary;
+@link-color-hover: #3a79ff;
+@link-color-active: #2353be;
+
+/**************************************Fade Content**************************/
+@fadeout-start-colour: rgba(76, 68, 52, 0.45);
+@fadeout-end-colour: rgba(76, 68, 52, 0);
+
+/**************************************Buttons*******************************/
+@btn-background-disabled: #f9f9f9;
+
+@btn-primary-background-base: @brand-primary;
+@btn-primary-background-hover: @brand-primary-hover;
+@btn-primary-background-active: @brand-primary-active;
+@btn-primary-background-focus: #F06E00;
+@btn-disabled: @grey-200;
+
+@btn-secondary-background-focus: #F2A416;
+
+@btn-default-hover-color: @brand-primary-hover;
+@btn-default-active-color: @brand-primary-active;
+
+@btn-disabled: @grey-200;
+
+@btn-min-width: 116px;
+
+/**************************************Forms*********************************/
+@checkbox-size: 16px;
+@checkbox-background-base: @white;
+@checkbox-border-color-base: @bg-grey-07;
+@checkbox-background-checked: @brand-primary-active;
+@checkbox-color-checked: @white;
+@checkbox-background-disabled: @grey-100;
+@checkbox-color-disabled: @grey-600;
+
+@radio-size: 16px;
+@radio-border-color-base: @bg-grey-07;
+@radio-border-background-base: @brand-primary-active;
+@radio-background-checked: @brand-primary-active;
+@radio-background-disabled: @bg-grey-01;
+@radio-color-checked: @white;
+
+@btn-border-radius: 2px;
+@btn-min-height: 48px;
+@btn-font-weight: 600;
+
+/**************************************Icons**********************************/
+@icon-xxs-size: 12px;
+@icon-xs-size: 14px;
+@icon-sm-size: 16px;
+@icon-md-size: 18px;
+@icon-lg-size: 24px;
+@icon-xl-size: 28px;
+@icon-xxl-size: 48px;
+
+@icon-blob-size-lg: 32px;
+
+@primary-notification-color: @chartcolour-8;
+@warning-notification-color: @chartcolour-14;
+@success-notification-color: @chartcolour-10;
+@error-notification-color: @brand-danger-dark;
+
+/**************************************Cards**********************************/
+@card-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+@card-tag-shadow: 0px 2px 2px 0px rgba(0,0,0,0.15);
+
+@card-height-lg: 324px;
+@card-height-sm: 200px;
+
+@card-margin-base: @margin-xxl;
+@card-margin-mobile: @margin-lg;
+
+@card-padding-base: @padding-xxl;
+@card-padding-mobile: @padding-lg;
+
+@card-border-radius: 6px;
+@card-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+
+@card-header-height-xs: 76px;
+@card-header-height-sm: 96px;
+@card-header-height-md: 128px;
+@card-header-height-lg: 160px;
+@card-header-height-xl: 192px;
+@card-header-height-xxl: 252px;
+
+@card-header-btn-size-lg: 64px;
+@card-header-btn-size-sm: 48px;
+
+/***********************************Footer***************************************/
+@footer-info-modal-max-height: 640px;
+@footer-info-modal-max-width: 70vw;
+@footer-link-padding: 28px;
+
+/************************************Header**************************************/
+@header-menu-top-height: 80px;
+@header-menu-bottom-height: 64px;
+@header-menu-height: @header-menu-top-height + @header-menu-bottom-height;
+
+@header-menu-profile-height: 220px;
+@header-menu-profile-mobile-height: 38px;
+
+@header-menu-reimbursement-height: 220px;
+@header-menu-reimbursement-mobile-height: 38px;
+
+@header-menu-mobile-height: 64px;
+
+@dropdown-menu-width: 330px;
+@dropdown-menu-max-height: ~"calc(100vh - @{header-menu-height} - 70px)";
+
+@banner-mobile-max-height: 64px;
+@banner-mobile-max-width: 196px;
+
+@menu-mobile-header-xs-height: 60px;
+@menu-mobile-header-sm-height: 80px;
+@menu-mobile-content-xs-height: ~"calc(100% - 160px)";
+@menu-mobile-content-sm-height: ~"calc(100% - @{menu-mobile-header-sm-height})";
+
+/***********************************Go To Top Arrow******************************/
+@scroll-to-top-arrow-size: 48px;
+@scroll-to-top-arrow-background: @brand-primary;
+@scroll-to-top-arrow-border-radius: 60px;
+
+/**************************************Toggle***********************************/
+@toggle-width: 80px;
+@toggle-height: 32px;
+
+/**************************************Tooltip***********************************/
+@tooltip-arrow-size: 12px;
+@tooltip-border-radius: 4px;
+
+/**************************************Modal************************************/
+@modal-header-height: 72px;
+@modal-border-color: #eee;
+
+/******************************Notification Message*****************************/
+@notification-information-message: #e2f2ff;
+@notification-success-message: #f0ffe8;
+@notification-warning-message: #fffde9;
+@notification-error-message: #fff3f3;
+@notification-error-message-text: @brand-danger-dark;
+
+@notification-message-min-width: 1020px;
+
+/******************************Z Index*********************************/
+
+@zindex-header-nav-bar-sec: 300;
+@zindex-header-nav-bar-top: 400;
+@zindex-spotlight-tour-background: 500;
+@zindex-back-drop: @zindex-overlay-base - 1;
+@zindex-overlay-base: 1000;
+@zindex-overlay-close-icon: @zindex-overlay-base + 1;
+@zindex-loading-animation: 2000;
+@zindex-profile-nav-bar: @zindex-header-nav-bar-sec - 1;
+
+/******************************Base Overlay*********************************/
+
+@overlay-banner-height-desktop: 12px;
+@overlay-content-maxwidth: 601px;
+
+/******************************Welcome overlay*********************************/
+@welcome-overlay-height: 640px;
+
+@welcome-overlay-desktop-max-width: 1024px;
+@welcome-overlay-tablet-max-width: 720px;
+@welcome-overlay-mobile-max-width: inherit;
+
+@welcome-overlay-content-dekstop-max-width: 815px;
+@welcome-overlay-content-tablet-max-width: 600px;
+@welcome-overlay-content-mobile-max-width: inherit;
+
+/************************************Home-Page**********************************/
+@home-engager-overview-chart-size-sm: 64px;
+@home-engager-overview-chart-size-md: 72px;
+@home-engager-overview-chart-size-lg: 120px;
+@home-engager-overview-chart-size-xl: 132px;
+
+@home-engager-overview-desktop-threshold: 1200px;
+@home-engager-overview-border-width: 1px;
+
+@home-hero-image-height-full: 400px;
+@home-hero-image-height-mobile: 270px;
+
+@home-hero-text-height-full: 210px;
+@home-hero-text-height-mobile: 158px;
+
+@supporting-page-title-max-height-base: 3 * @h2-line-height-base + 2 * @padding-xxxl;
+@supporting-page-title-max-height-tablet: 3 * @h2-line-height-tablet + 2 * @padding-xxxl;
+@supporting-page-title-max-height-mobile: 2 * @h2-line-height-mobile + 2 * @padding-lg;
+
+/***************************************Device Size*********************************/
+@screen-xs-max-width: 320px;
+@screen-sm-max-width: 768px;
+@screen-md-max-width: 1280px;
+@screen-lg-max-width: 1600px;
+
+/***************************************Input**************************************/
+@input-height: 48px;
+@input-border-radius: 3px;
+@input-line-height: 22px;
+@input-heading-font-weight: 600;
+@input-border-color: #cbcbcb;
+@input-disabled: #f9f9f9;
+
+@input-focus-border: #82aeff;
+@input-focus-background: #faffff;
+
+@input-error-border: #d12727;
+@input-error-background: #fffafa;
+
+@input-warning-border: #ffc76c;
+@input-warning-background: #fffdea;
+
+/***************************************Spotlight**************************************/
+@spotlight-base-max-width: 384px;
+@spotlight-mobile-max-width: ~"calc(100vw - 20px)";
+
+@spotlight-border-radius: 3px;
+
+@spotlight-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+/****************************************Notifications*********************************/
+@notification-count-backgorund-color: #FF0000;
+@notification-count-threshold: 72;
+
+/****************************************Payslips**************************************/
+@payslip-select-min-width-110: 110px;
+@payslip-select-min-width-150: 150px;
+@payslip-select-media-query-max-width: 750px;
+@payslip-select-border: 1px solid @input-border-color;
+
+@payslip-border-radius: 3px;
+@payslips-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+@payslips-font-weight-300: 300;
+@payslips-font-weight-600: 600;
+
+@payslips-mobile-label-width: 140px;
+@payslips-label-width: 250px;
+@payslips-taxes-label-width: 280px;
+
+@payslips-message-container-height: 128px;
+@payslips-no-payslips-container-height: 292px;
+
+@payslip-personal-message-icon-width-height: 60px;
+@payslip-personal-message-icon-border-radius: 50px;
+
+/****************************************Agreements**************************************/
+@agreements-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+@agreements-border-radius: 6px;
+
+@agreements-no-agreements-container-height: 292px;
+
+@agreements-mobile-box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+
+@agreements-mobile-title-letter-spacing: 0.9px;
+
+@agreements-mobile-card-border: 1px solid @input-border-color;
+@agreements-mobile-border-radius: 3px;
+@agreements-mobile-card-border-top: 3px solid @client-colour-1;
+@agreements-mobile-label-width: 100px;
+
+@agreements-font-weight-300: 300;
+@agreements-font-weight-600: 600;
+
+@agreements-mobile-download-padding: 10px;
+@agreements-mobile-type-field-padding: 40px;
+
+@agreements-mobile-break-line-height: 1px;
+
+@agreements-mobile-card-min-height: 200px;
+@agreements-mobile-card-top-container-min-height: 134px;
+@agreements-mobile-card-bottom-container-min-height: 50px;
+
+/****************************************Toast Colors************************************/
+@toast-normal-color: #e5e5e5;
+@toast-normal-background-color: #323232;
+@toast-normal-border-color: #000000;
+@toast-normal-action-color: #ffffff;
+@toast-success-color: #303333;
+@toast-success-background-color: #f0ffe9;
+@toast-success-border-color: #f0ffe9;
+@toast-success-action-color: #323232;
+@toast-danger-color: @brand-danger-dark;
+@toast-danger-background-color: #fff3f3;
+@toast-danger-border-color: #fff3f3;
+@toast-danger-action-color: #323232;
+@toast-close-color: #e74e4e;
+
+/****************************************Cost Filter Bar************************************/
+@cost-filter-bar-height: 96px;
+@cost-filter-bar-height-mobile: 38px;
+
+/****************************************Cost Filter Bar************************************/
+@button-group-height: 38px;
+@button-group-element-width: 116px;
+@cost-filter-bar-button-height: @button-group-height - 2px;
+
+/***********************************Selection Header Details********************************/
+@selection-header-bottom-border: 1px solid @grey-200;
+
+@selection-status-active-colour: @chartcolour-10;
+@selection-status-in-cart-colour: #F06E00;
+
+/****************************************Benefit Selection************************************/
+
+@ineligible-dependnats-column-max-width: 195px;
+
+
+@cost-difference-green: #53aa27;
+@cost-difference-green-hover: darken(@cost-difference-green, 10%);
+
+@cost-difference-red: #d12727;
+@cost-difference-red-hover: darken(@cost-difference-red, 10%);
+
+@in-cart-background-color: #fff9eb;
+
+/****************************************Pre-Selection Agreement************************************/
+@preselection-card-content-mobile-height: 246px;
+
+/*************************************Selection Cost Panel***********************************/
+@cost-panel-background-color: #fafeff;
+@cost-panel-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+@cost-panel-border: 1px solid #dfe5e6;
+@cost-panel-border-radius: 3px; 
+
+/***************************************Deselect Benefit*************************************/
+@desktop-max-width-600: 600px;
+
+/***************************************Dialog*************************************/
+@dialog-desktop-max-width: 1024px;
+@dialog-tablet-max-width: 720px;
