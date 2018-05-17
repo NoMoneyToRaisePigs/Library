@@ -11,12 +11,12 @@ export class HeaderComponent implements OnInit{
     constructor(){}
 
     ngOnInit(){
-        this.navigationItems.push(<NavigationItem>{name:'Library'});
-        this.navigationItems.push(<NavigationItem>{name:'Resume'});
+        this.navigationItems.push(<NavigationItem>{name:'Library', url: '//library'});
+        this.navigationItems.push(<NavigationItem>{name:'Resume', url: '//resume'});
     }
 }
 
 class NavigationItem{
     name:string;
-
+    url: string;
 }

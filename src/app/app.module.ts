@@ -1,19 +1,22 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }  from './app.component';
-import {ProgressBar} from './progress-bar.component';
+//import { ProgressBar } from './progress-bar.component';
 import { ButtonComponent } from './common/component/button/button.component';
 import { LayoutComponent } from './Layout/layout.component';
 import { HeaderComponent } from './Layout/Header/header.component';
+import { ResumeComponent } from './Resume/resume.component';
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ BrowserModule, AppRoutingModule ],
   declarations: [
      AppComponent, 
-     ProgressBar, 
+     //ProgressBar, 
      ButtonComponent, 
      LayoutComponent,
-     HeaderComponent
+     HeaderComponent,
+     ResumeComponent
      ],
   bootstrap:    [ AppComponent ]
 })
