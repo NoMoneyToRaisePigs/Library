@@ -11,8 +11,8 @@ export class HeaderComponent implements OnInit{
     constructor(){}
 
     ngOnInit(){
-        this.navigationItems.push(<NavigationItem>{name:'Library', url: '//library'});
-        this.navigationItems.push(<NavigationItem>{name:'Resume', url: '//resume'});
+        this.navigationItems.push(<NavigationItem>{name:'Library', url: '/src/library'});
+        this.navigationItems.push(<NavigationItem>{name:'Resume', url: '/src/resume'});
     }
 }
 
