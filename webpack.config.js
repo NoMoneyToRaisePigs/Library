@@ -2,14 +2,15 @@
 module.exports = {
 	entry: ["./src/main"],
 	output: {
-		filename: "bundle.js"
+		filename: "bundle.js",
+		chunkFilename: '[name]-chunk.js',
 	},
 	module: {
 		loaders: [
 			{
 				test: /\.ts$/,
 				exclude: /node_modules/,
-				loader: "ts-loader"
+				loader: ["ts-loader","angular-router-loader"]
 			}
 		]
 	},

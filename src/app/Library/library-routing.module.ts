@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
-
-import { ButtonComponent } from '../common/component/button/button.component';
+import { LibraryComponent } from './library.component';
 
 const routes: Routes = [
-    {path:'libiary', component: ButtonComponent}
+        {path:'src', component: LibraryComponent},
+    {path:'src/resume', component: LibraryComponent},
+    {path:'resume', component: LibraryComponent},
+    {path:'', component: LibraryComponent}
 ];
 
 @NgModule({
