@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { HeaderService } from './header.service';
+import { NavBar, MenuItem } from './header';
 
 @Component({
     selector:'header',
@@ -6,17 +8,33 @@ import {Component, OnInit} from '@angular/core';
     styleUrls:['./src/app/Layout/Header/header.component.css']
 })
 export class HeaderComponent implements OnInit{
-    navigationItems: NavigationItem[] = [];
+    // navigationItems: NavigationItem[] = [];
+    test: NavBar;
+    menu: MenuItem[];
 
-    constructor(){}
+    constructor(
+        private headerService: HeaderService,
+        private changeDetectorRef: ChangeDetectorRef
+    ){}
 
     ngOnInit(){
-        this.navigationItems.push(<NavigationItem>{name:'Library', url: '//library'});
-        this.navigationItems.push(<NavigationItem>{name:'Resume', url: '//resume'});
+        
+        this.headerService.populateMenu();
+        this.test = this.headerService.testNav;
+        this.test.navItems = this.headerService.navItems;
+        //this.menu = this.headerService.testNav.navItems;
+        window.onresize = () => { 
+            this.headerService.populateMenu();
+            this.test.navItems = this.headerService.navItems;
+            //this.menu = this.headerService.testNav.navItems;
+            this.changeDetectorRef.markForCheck();
+            this.changeDetectorRef.detectChanges();
+        };
     }
 }
 
-class NavigationItem{
-    name:string;
-    url: string;
-}
+
+// class NavigationItem{
+//     name:string;
+//     url: string;
+// }

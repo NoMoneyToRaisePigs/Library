@@ -1,7 +1,11 @@
 <div class="header-container">
     <div class="logo"></div>
     <div class="header-navigation-item">
-        <div class="item" *ngFor="let navItem of navigationItems"><a [routerLink]="navItem.url" routerLinkActive="active"><span>{{navItem.name}}</span></a></div>
+        <div class="item" *ngFor="let item of test.navItems">
+            <a [routerLink]="item.url" routerLinkActive="active">
+                <span>{{item.name}}</span>
+            </a>
+        </div>
     </div>
     <div class="notification"></div>
 </div>

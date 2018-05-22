@@ -7,7 +7,7 @@
     "server": "webpack-dev-server -w",
     "gulp-task": "gulp",
     "gulp-clean-css": "gulp clean-css",
-    "build": "tsc -p src/"
+    "build": "tsc -p src/ -w"
   },
   "dependencies": {
     "@angular/common": "^2.4.5",

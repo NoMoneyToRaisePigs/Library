@@ -4,11 +4,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './Home/home.component';
 
+import { HeaderComponent } from './Layout/Header/header.component';
+import { LayoutComponent } from './Layout/layout.component';
+
+import { HeaderService } from './Layout/Header/header.service';
+
 @NgModule({
-  imports:      [ BrowserModule, AppRoutingModule ],
+  imports: [ BrowserModule, AppRoutingModule ],
+  providers:[ HeaderService ],
   declarations: [
      AppComponent, 
-     HomeComponent
+     HomeComponent,
+     HeaderComponent,
+     LayoutComponent
      ],
   bootstrap:    [ AppComponent ]
 })
