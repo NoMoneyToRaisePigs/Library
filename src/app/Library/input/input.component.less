@@ -1,0 +1,92 @@
+.input-container{
+    margin: 20px;
+    position: relative;
+
+    .input{
+        /*positioning*/
+
+        /*box*/
+        width: 350px;
+        height: 30px;
+        box-sizing: border-box;
+
+        /*border*/
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #564f4f;
+
+        /*font*/
+        font-family: cursive;
+        font-size: 18px;
+    }
+
+    .input:focus{
+        border-bottom:none;
+    }
+
+     .input-label{
+        position: absolute;
+        width: 350px;
+        height: 25px;
+        left: 0px;
+        bottom:0px;
+        pointer-events: none;
+        box-sizing: border-box;
+        /*border-bottom: 1px solid red;*/
+        font-size: 15px;
+        opacity: 0.4;
+        font-style: italic;
+        font-family: cursive;
+    }
+// .input-label::before{
+//     content: '*'
+// }
+        .input-label::after{
+                box-sizing: border-box;
+                position: absolute;
+
+                bottom: 0px;
+                left: 50%;
+
+                height: 0px;
+                width: 0px;
+
+                content: '';
+                border-bottom: 2px solid #8f7bcd;
+        }
+
+        .input-label.filled{
+                opacity: 0.6;
+                font-size: 12px;
+                height: 45px;
+        }
+
+        .input:focus + .input-label{
+                opacity: 0.6;
+                font-size: 12px;
+                height: 45px;
+                transition: 0.4s;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input:focus + .input-label.input-label::after{
+                left: 0px;
+                width: 350px;
+                transition: 0.5s;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-error{
+            display: none;
+        }
+
+        .input-error.has-error{
+            
+            position: absolute;
+            font-size: 12px;
+            font-family: cursive;
+        }
+}
+
+
+

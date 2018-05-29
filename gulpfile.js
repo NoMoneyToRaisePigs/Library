@@ -57,11 +57,16 @@ gulp.task('watch-less', function() {
 //gulp.task('default', ['watch-less', 'serve']);
 gulp.task('clean-css', function() {  
     return del([
-    './src/app/**/*.css',
-    './bundle.js',
-    './bundle.js.map'
+    './src/app/**/*.css'
   ]);
 });
 
+
+gulp.task('clean-js', function() {  
+    return del([
+    './src/app/**/*.js',
+    './src/app/**/*.map'
+  ]);
+});
 
 gulp.task('default', ['watch-less']);

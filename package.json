@@ -6,7 +6,9 @@
     "webpack": "webpack",
     "server": "webpack-dev-server -w",
     "gulp-task": "gulp",
-    "gulp-clean-css": "gulp clean-css",
+    "css":"gulp",
+    "clean-css": "gulp clean-css",
+    "clean-js": "gulp clean-js",
     "build": "tsc -p src/ -w"
   },
   "dependencies": {
