@@ -5,7 +5,7 @@ var less = require('gulp-less');
 var del = require('del');
 var fs = require('fs');
 var path = require('path');
-var root = 'C:\\Users\\Fan\\Documents\\gaofan folder\\hello git\\NG-Quick-Start-Webpack\\src\\app';
+//var root = 'C:\\Users\\Fan\\Documents\\gaofan folder\\hello git\\NG-Quick-Start-Webpack\\src\\app';
 var allFolders = [];
  
 
@@ -30,43 +30,41 @@ function getAllFolders(folders){
     };
 }
 
+
 /* Task to compile less */
 gulp.task('compile-less', function() {  
-  gulp.src('src/app/**/*.less',{base:"./"})
+  let currentPath = path.join(__dirname, "src");
+  getAllFolders([currentPath]);
+  let compile = [];
+  allFolders.forEach(x => compile.push(path.join(x,'*.css')));
+
+  gulp.src(compile)
     .pipe(less())
     .pipe(gulp.dest('.'));
 }); 
 /* Task to watch less changes */
 gulp.task('watch-less', function() {  
-  gulp.watch('./src/app/**/*.less' , ['compile-less']);
+  let currentPath = path.join(__dirname, "src");
+  getAllFolders([currentPath]);
+  let compile = [];
+  allFolders.forEach(x => compile.push(path.join(x,'*.css')));
+  gulp.watch(compile , ['compile-less']);
 });
  
-// gulp.task('serve', function () {
- 
-//     // Serve files from the root of this project
-//     browserSync.init({
-//         server: {
-//             baseDir: "./distro/"
-//         }
-//     }); 
-//     gulp.watch("./src/*.less").on("change", reload);
-//     gulp.watch("./distro/*.html").on("change", reload);
-// });
- 
-/* Task when running `gulp` from terminal */
-//gulp.task('default', ['watch-less', 'serve']);
-gulp.task('clean-css', function() {  
-    return del([
-    './src/app/**/*.css'
-  ]);
+/* Task to clean compliled files */
+gulp.task('clean', function() {  
+    var currentPath = path.join(__dirname, "src");
+    getAllFolders([currentPath]);
+    var toBeCleaned = [];
+    allFolders.forEach(x => toBeCleaned.push(path.join(x,'*.css')));
+    allFolders.forEach(x => toBeCleaned.push(path.join(x,'*.js')));
+    allFolders.forEach(x => toBeCleaned.push(path.join(x,'*.map')));
+    toBeCleaned.push(path.join(currentPath,"*.js"));
+    toBeCleaned.push(path.join(currentPath,"*.map"));
+    toBeCleaned.push('!' + path.join(currentPath, "systemjs.config.js"));
+
+    return del(toBeCleaned);
 });
 
-
-gulp.task('clean-js', function() {  
-    return del([
-    './src/app/**/*.js',
-    './src/app/**/*.map'
-  ]);
-});
 
 gulp.task('default', ['watch-less']);

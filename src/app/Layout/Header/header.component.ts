@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit{
 
     ngOnInit(){
         
+        
         this.headerService.populateMenu();
         this.test = this.headerService.testNav;
         this.test.navItems = this.headerService.navItems;
