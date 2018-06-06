@@ -36,7 +36,7 @@ gulp.task('compile-less', function() {
   let currentPath = path.join(__dirname, "src");
   getAllFolders([currentPath]);
   let compile = [];
-  allFolders.forEach(x => compile.push(path.join(x,'*.css')));
+  allFolders.forEach(x => compile.push(path.join(x,'*.less')));
 
   gulp.src(compile)
     .pipe(less())
@@ -47,7 +47,7 @@ gulp.task('watch-less', function() {
   let currentPath = path.join(__dirname, "src");
   getAllFolders([currentPath]);
   let compile = [];
-  allFolders.forEach(x => compile.push(path.join(x,'*.css')));
+  allFolders.forEach(x => compile.push(path.join(x,'*.less')));
   gulp.watch(compile , ['compile-less']);
 });
  

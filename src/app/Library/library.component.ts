@@ -2,7 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
     selector:'library',
-    template:'<h1>library</h1><gf-input></gf-input>'
+    templateUrl:'./src/app/Library/library.component.html',
+    styleUrls:['./src/app/Library/library.component.css']
 })
 export class LibraryComponent {
 

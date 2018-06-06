@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { LibraryComponent } from './library.component';
 import { InputComponent } from './input/input.component';
+import { MenuComponent } from './menu/menu.component';
 
 const libraryRoutes: Routes = [
     {path:'', component: LibraryComponent}
@@ -14,7 +15,8 @@ const libraryRoutes: Routes = [
     imports:[CommonModule, FormsModule, RouterModule.forChild(libraryRoutes)],
     declarations:[
         LibraryComponent,
-        InputComponent
+        InputComponent,
+        MenuComponent
         ]
 })
 
