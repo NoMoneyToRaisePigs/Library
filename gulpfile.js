@@ -38,9 +38,9 @@ gulp.task('compile-less', function() {
   let compile = [];
   allFolders.forEach(x => compile.push(path.join(x,'*.less')));
 
-  gulp.src(compile)
+  gulp.src(compile, { base: "." })
     .pipe(less())
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./'));
 }); 
 /* Task to watch less changes */
 gulp.task('watch-less', function() {  

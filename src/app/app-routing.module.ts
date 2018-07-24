@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './Home/home.component';
 
 const routes: Routes =[
-    {path:'library', loadChildren: 'src/app/Library/library.module#LibraryModule'},
-    {path:'resume', loadChildren: 'src/app/Resume/resume.module#ResumeModule'},
+    // {path:'library', loadChildren: 'src/app/Library/library.module#LibraryModule'},
+    // {path:'resume', loadChildren: 'src/app/Resume/resume.module#ResumeModule'},
+    {path:'library', loadChildren: './Library/library.module#LibraryModule'},
+    {path:'resume', loadChildren: './Resume/resume.module#ResumeModule'},
     {path: 'src/home', component: HomeComponent},
     { path: 'src',
     redirectTo: '/src/home',

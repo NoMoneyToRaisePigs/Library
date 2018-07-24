@@ -6,8 +6,9 @@
     "webpack": "webpack",
     "server": "webpack-dev-server -w",
     "build": "tsc -p src/ -w",
-    "css":"gulp watch-less",
-    "clean": "gulp clean"
+    "css": "gulp watch-less",
+    "clean": "gulp clean",
+    "css-once": "gulp compile-less"
   },
   "dependencies": {
     "@angular/common": "^2.4.5",
