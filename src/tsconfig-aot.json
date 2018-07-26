@@ -1,0 +1,29 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+      "baseUrl": "./",
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@angular/*": ["../node_modules/@angular/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot",
+    "**/*.spec.ts",
+    "**/boot.ts",
+    "**/main.ts"
+  ],
+  "angularCompilerOptions": {
+    "skipMetadataEmit": true
+  }
+}

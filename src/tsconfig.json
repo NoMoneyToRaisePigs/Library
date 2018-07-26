@@ -16,6 +16,8 @@
   "compileOnSave": true,
   "exclude": [
     "node_modules/*",
-    "**/*-aot.ts"
+    "wwwroot",
+    "**/*-aot.ts",
+    "**/*.ngfactory.ts"
   ]
 }
