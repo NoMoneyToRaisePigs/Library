@@ -24,16 +24,8 @@ export class HeaderComponent implements OnInit{
         this.headerService.populateMenu();
         this.test = this.headerService.testNav;
         this.test.navItems = this.headerService.navItems;
-        //this.menu = this.headerService.testNav.navItems;
-        // window.onresize = () => { 
-        //     this.headerService.populateMenu();
-        //     this.test.navItems = this.headerService.navItems;
-        //     //this.menu = this.headerService.testNav.navItems;
-        //     this.changeDetectorRef.markForCheck();
-        //     this.changeDetectorRef.detectChanges();
-        // };
-
-        window.onresize = function xxx(){
+        this.menu = this.headerService.testNav.navItems;
+        window.onresize = () => { 
             this.headerService.populateMenu();
             this.test.navItems = this.headerService.navItems;
             //this.menu = this.headerService.testNav.navItems;
