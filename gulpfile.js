@@ -62,6 +62,7 @@ gulp.task('clean', function() {
     toBeCleaned.push(path.join(currentPath,"*.js"));
     toBeCleaned.push(path.join(currentPath,"*.map"));
     toBeCleaned.push('!' + path.join(currentPath, "systemjs.config.js"));
+    toBeCleaned.push('!' + path.join(currentPath, "systemjs-angular-loader.js"))
 
     return del(toBeCleaned);
 });
