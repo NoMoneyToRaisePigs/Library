@@ -5,7 +5,7 @@ import { NavBar, MenuItem } from './header';
 @Component({
     selector:'header',
      templateUrl:'./src/app/Layout/Header/header.component.html',
-     styleUrls:['./src/app/Layout/Header/header.component.css']
+     //styleUrls:['./src/app/Layout/Header/header.component.css']
     //     templateUrl:'header.component.html',
     // styleUrls:['header.component.css']
 })

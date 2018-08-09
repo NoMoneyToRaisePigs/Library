@@ -9,7 +9,9 @@
     "css": "gulp watch-less",
     "clean": "gulp clean",
     "css-once": "gulp compile-less",
-    "compile-aot": "ngc -p src/tsconfig-aot.json"
+    "compile-aot": "ngc -p src/tsconfig-aot.json",
+    "test-css": "gulp test-css",
+    "prod-css": "gulp prod-css"
   },
   "dependencies": {
     "@angular/common": "^2.4.5",

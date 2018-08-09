@@ -2,6 +2,7 @@
 module.exports = {
 	entry: ["./src/main"],
 	output: {
+		path: __dirname + "/prod",
 		filename: "bundle.js",
 		chunkFilename: '[name]-chunk.js',
 	},
