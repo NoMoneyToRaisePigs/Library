@@ -1,17 +1,22 @@
 
 module.exports = {
-	entry: ["./src/main"],
+	entry: ["./src/ployfills","./src/main"],
 	output: {
 		path: __dirname + "/prod",
-		filename: "bundle.js",
-		chunkFilename: '[name]-chunk.js',
+		filename: "[name].js",
+		chunkFilename: '[name]-chunk.js'
+		//publicPath:'/prod/'
 	},
 	module: {
 		loaders: [
 			{
+				test: /\.html$/,
+				loader: ["raw-loader"]
+			},
+			{
 				test: /\.ts$/,
 				exclude: /node_modules/,
-				loader: ["ts-loader","angular-router-loader"]
+				loader: ["awesome-typescript-loader","angular-router-loader","angular2-template-loader"]
 			}
 		]
 	},

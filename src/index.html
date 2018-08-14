@@ -10,15 +10,16 @@
     </style>
     <link rel="stylesheet" href="src/app/app.css">
     <!-- Polyfills -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+     <script src="node_modules/core-js/client/shim.min.js"></script>
 
-    <script src="node_modules/zone.js/dist/zone.js"></script> 
+    <script src="node_modules/zone.js/dist/zone.js"></script>  
 
-      <!--<script src="node_modules/systemjs/dist/system.src.js"></script>
+      <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+      <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="src/systemjs.config.js"></script>
     <script>
-      System.import('src/main.js').catch(function(err){ console.error(err); });
-    </script>  -->
+      System.import('src/app/boot.js').catch(function(err){ console.error(err); });
+    </script>  
 
   </head>
   <!--<base href="/">-->
@@ -27,6 +28,6 @@
     <p>a git pull test</p>
     <p>trigger</p>
   </body>
-  <script src="bundle.js"></script>
+  <!-- <script src="prod/main.js"></script> -->
   <!--<script src="bundle.js"></script>-->
 </html>

@@ -29,13 +29,12 @@
         packages: {
             app: {
                 main: './main.js',
-                defaultExtension: 'js'
-                //,
-                // meta: {
-                //     './*.js': {
-                //         loader: 'scripts/systemjs-angular-loader.js'
-                //     }
-                // }
+                defaultExtension: 'js',
+                meta: {
+                    './*.js': {
+                        loader: 'app/systemjs-angular-loader.js'
+                    }
+                }
             },
             rxjs: {
                 defaultExtension: 'js'
