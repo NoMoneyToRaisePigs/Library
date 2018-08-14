@@ -1,2 +1,5 @@
 /node_modules/
 package-lock.json
+prod/*.map
+prod/*.js
+prod/*.css

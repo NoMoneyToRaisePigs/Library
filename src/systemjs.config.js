@@ -41,6 +41,13 @@
             },
             "./":{
                  defaultExtension: 'js'
+            },
+            src:{
+                meta: {
+                    'app/*.js': {
+                        loader: 'src/systemjs-angular-loader.js'
+                    }
+                }
             }
         }
     });
