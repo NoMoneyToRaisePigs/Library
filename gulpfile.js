@@ -67,7 +67,7 @@ gulp.task('clean', function() {
     return del(toBeCleaned);
 });
 
-gulp.task('test-css',function(){
+gulp.task('dev-css',function(){
     var lessPath = [path.join(__dirname, "src","app","app.less")];
 
    gulp.src(lessPath, { base: "." })

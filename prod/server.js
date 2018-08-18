@@ -10,17 +10,18 @@ const server = http.createServer((request, response) => {
 //   res.setHeader('Content-Type', 'text/html');
 //   var html = fs.readFileSync('index.html');
 //   res.end(html);
-    var filePath;
-
-    if(request.url.includes('node_modules') || request.url.includes('src/')){
-        filePath = '..' + request.url;
-    }
-    else{
-        filePath = '.' + request.url;
-    }
+    var filePath = '.' + request.url;
+    var current = __dirname;
+    // if(request.url.includes('node_modules') || request.url.includes('src/')){
+    //     filePath = '..' + request.url;
+    // }
+    // else{
+    //     filePath = '.' + request.url;
+    // }
       
     if (filePath == './'){
         filePath = './index.html';
+        //filePath = 'prod/index.html';
     }
 
 
@@ -77,5 +78,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`Prod Server running at http://${hostname}:${port}/`);
 });
