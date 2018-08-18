@@ -77,6 +77,8 @@ const server = http.createServer((request, response) => {
     });
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Prod Server running at http://${hostname}:${port}/`);
-});
+// server.listen(port, hostname, () => {
+//   console.log(`Prod Server running at http://${hostname}:${port}/`);
+// });
+
+server.listen(process.env.PORT || 8080);
