@@ -48,7 +48,7 @@ gulp.task('watch-less', function() {
   getAllFolders([currentPath]);
   let compile = [];
   allFolders.forEach(x => compile.push(path.join(x,'*.less')));
-  gulp.watch(compile , ['compile-less']);
+  gulp.watch(compile , ['dev-css']);
 });
  
 /* Task to clean compliled files */
