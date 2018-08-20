@@ -6,7 +6,7 @@
     "dev-start": "gulp dev-css && tsc -p src/ && node server.js",
     "dev-build": "gulp dev-css && tsc -p src/",
     "prod-build": "gulp prod-css && webpack",
-    "prod-start":"node --inspect prod/server.js",
+    "prod-start": "node --inspect prod/server.js",
     "ts": "tsc -p src/",
     "watch-ts": "tsc -p src/ -w",
     "watch-less": "gulp watch-less",
@@ -52,6 +52,7 @@
     "gulp": "^3.9.1",
     "gulp-less": "^3.5.0",
     "raw-loader": "^0.5.1",
+    "string-replace-loader": "^2.1.1",
     "ts-loader": "^2.3.7",
     "typescript": "^2.9.2",
     "webpack": "^3.12.0"

@@ -8,7 +8,7 @@ module.exports = {
 		//publicPath:'/prod/'
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.html$/,
 				loader: ["raw-loader"]
@@ -16,13 +16,23 @@ module.exports = {
 			{
 				test: /\.ts$/,
 				exclude: /node_modules/,
-				loader: ["awesome-typescript-loader","angular-router-loader","angular2-template-loader"]
+				loader: [
+					"awesome-typescript-loader",
+					"angular-router-loader",
+					"angular2-template-loader",
+					{loader: 'string-replace-loader', query: { 
+                        multiple: [
+                            { search: "loadChildren: 'src\/app\/", replace: "loadChildren: './", flags: 'g' }
+                        ]
+					}
+				}]
 			}
 		]
 	},
 
 	resolve: {
 		extensions: ['.ts','.js']
-    },
-    devtool:"source-map"
+	}//,
+	
+    //devtool:"source-map"
 }
