@@ -3,19 +3,41 @@ resume{
        height: 100%;
        display: flex;
        flex-direction: row;
+       padding-top: 12px;
 
-       .personal-info-container{
+       .profile-container{
            height: 100%;
-           width: 30%;
+           width: 20%;
            display: flex;
            flex-direction: column; 
+           align-items: center;
+           border-right: 1px solid black;
+
+           .picture{
+               width: 80%;
+           }
        }
 
        .details-container{
            height: 100%;
-           width: 70%;
+           width: 75%;
            display: flex;
            flex-direction: column;
+
+           .education{
+                height: 100px;
+                width: 100%;
+           }
+
+           .skills{
+                height: 100px;
+                width: 100%;
+           }
+
+           .experience{
+                height: 100px;
+                width: 100%;
+           }
        }
    } 
 }
