@@ -15,7 +15,7 @@ export class HeaderService{
 
   constructor() { 
         this.items.push(<MenuItem>{name:'Library', url: 'library'});
-        this.items.push(<MenuItem>{name:'Resume', url: 'resume'});
+        this.items.push(<MenuItem>{name:'Test', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test1', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test2', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test3', url: 'resume'});
@@ -25,6 +25,7 @@ export class HeaderService{
         // this.items.push(<MenuItem>{name:'test7', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test8', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test9', url: 'resume'});
+        
   }
 
   populateMenu(){

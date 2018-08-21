@@ -10,5 +10,10 @@ export class ResumeComponent implements OnInit{
 
     ngOnInit(){
     }
+
+    testmethod(ele: HTMLElement){
+        window.alert('haha');
+        
+    }
 }
 
