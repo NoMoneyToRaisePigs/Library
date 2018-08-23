@@ -3,3 +3,4 @@ package-lock.json
 prod/*.map
 prod/*.js
 prod/*.css
+prod/resource/

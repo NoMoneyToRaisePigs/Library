@@ -3,6 +3,8 @@ var less = require('gulp-less');
 //var browserSync = require('browser-sync').create();
 //var reload      = browserSync.reload;
 var del = require('del');
+var imagemin = require('gulp-imagemin');
+
 var fs = require('fs');
 var path = require('path');
 //var root = 'C:\\Users\\Fan\\Documents\\gaofan folder\\hello git\\NG-Quick-Start-Webpack\\src\\app';
@@ -83,5 +85,11 @@ gulp.task('prod-css',function(){
     .pipe(less())
     .pipe(gulp.dest('./prod/'));
 });
+
+gulp.task('prod-image', () =>
+    gulp.src('resource/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('prod/resource'))
+);
 
 gulp.task('default', ['watch-less']);

@@ -24,8 +24,13 @@ const server = http.createServer((request, response) => {
         //filePath = 'prod/index.html';
     }
 
-
     var extname = path.extname(filePath);
+
+    if(extname == '.jpg'){
+        let diffParts = request.url.split('/');
+        filePath = path.join(__dirname,"resource",diffParts[diffParts.length - 1]);
+    }
+
     var contentType = 'text/html';
     switch (extname) {
         case '.html':
