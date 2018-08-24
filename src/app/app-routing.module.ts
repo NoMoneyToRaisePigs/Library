@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 //import { HomeComponent } from './Home/home.component';
 import { LayoutComponent } from './Layout/layout.component';
+import { AppResolver } from './app.resolver'
 
 // const routes: Routes =[
 //     {path:'library', loadChildren: 'src/app/Library/library.module#LibraryModule'}, // this is for Systemjs
@@ -17,7 +18,7 @@ import { LayoutComponent } from './Layout/layout.component';
 
 const routes: Routes =[
     {
-        path:'',component: LayoutComponent, children:[
+        path:'',component: LayoutComponent, resolve: [AppResolver], children:[
             {path:'Home', loadChildren: 'src/app/Home/home.module#HomeModule'},
             {path:'Library', loadChildren: 'src/app/Library/library.module#LibraryModule'},
             {path:'Resume', loadChildren: 'src/app/Resume/resume.module#ResumeModule'},
@@ -30,6 +31,6 @@ const routes: Routes =[
 @NgModule({
     imports: [RouterModule.forRoot(routes, { enableTracing: true })],
     exports: [RouterModule],
-    providers: []
+    providers: [AppResolver]
 })
 export class AppRoutingModule{}
