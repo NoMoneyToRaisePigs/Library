@@ -14,8 +14,8 @@ export class HeaderService{
   testNav: NavBar = {navItems:[]};
 
   constructor() { 
-        this.items.push(<MenuItem>{name:'Library', url: 'library'});
-        this.items.push(<MenuItem>{name:'Test', url: 'resume'});
+        this.items.push(<MenuItem>{name:'Library', url: '/Library'});
+        this.items.push(<MenuItem>{name:'Test', url: '/Resume'});
         // this.items.push(<MenuItem>{name:'test1', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test2', url: 'resume'});
         // this.items.push(<MenuItem>{name:'test3', url: 'resume'});
