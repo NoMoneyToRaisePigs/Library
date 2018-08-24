@@ -6,10 +6,7 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((request, response) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/html');
-//   var html = fs.readFileSync('index.html');
-//   res.end(html);
+
     var filePath = '.' + request.url;
     var current = __dirname;
     // if(request.url.includes('node_modules') || request.url.includes('src/')){
@@ -56,10 +53,6 @@ const server = http.createServer((request, response) => {
             break;
     }
     
-    // var content = fs.readdirSync(filePath);
-    // response.writeHead(200, { 'Content-Type': contentType });
-    // response.end(content, 'utf-8');
-
     fs.readFile(filePath, function(error, content) {
         if (error) {
             if(error.code == 'ENOENT'){
@@ -76,7 +69,6 @@ const server = http.createServer((request, response) => {
         }
         else {
             response.writeHead(200, { 'Content-Type': contentType });
-            //response.setHeader('Content-Type', 'text/html');
             response.end(content, 'utf-8');
         }
     });
