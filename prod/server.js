@@ -24,7 +24,7 @@ const server = http.createServer((request, response) => {
     var extname = path.extname(filePath);
 
     if(extname == '.jpg'){
-        let diffParts = request.url.split('/');
+        var diffParts = request.url.split('/');
         //filePath = path.join(__dirname,"resource",diffParts[diffParts.length - 1]);
         filePath = path.join("./","resource",diffParts[diffParts.length - 1]);
     }
