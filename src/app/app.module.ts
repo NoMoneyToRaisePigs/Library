@@ -10,6 +10,7 @@ import { GFComponentModule } from './common/component/gf-component.module';
 import { AppComponent }  from './app.component';
 import { LayoutComponent } from './Layout/layout.component';
 import { HeaderComponent } from './Layout/Header/header.component';
+import { LoadingComponent } from './Layout/Loading/loading.component';
 
 import { HeaderService } from './Layout/Header/header.service';
 
@@ -29,7 +30,8 @@ import { HeaderService } from './Layout/Header/header.service';
   declarations: [
      AppComponent, 
      LayoutComponent,
-     HeaderComponent
+     HeaderComponent,
+     LoadingComponent
      ],
   bootstrap:[ 
     AppComponent 
