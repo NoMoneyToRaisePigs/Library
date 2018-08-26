@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+import { GFComponentModule } from '../common/component/gf-component.module';
+//import { GFServiceModule } from '../common/service/gf-service.module';
+
 import { HomeComponent } from './home.component';
 import { HomeApp } from './home-app.component';
 
@@ -13,7 +16,12 @@ const homeRoutes: Routes = [
 ];
 
 @NgModule({
-    imports:[CommonModule, RouterModule.forChild(homeRoutes)],
+    imports:[
+        CommonModule, 
+        GFComponentModule, 
+        //GFServiceModule, 
+        RouterModule.forChild(homeRoutes)
+        ],
     declarations:[HomeComponent, HomeApp]
 })
 

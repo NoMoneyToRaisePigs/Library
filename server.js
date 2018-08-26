@@ -19,10 +19,10 @@ const server = http.createServer((request, response) => {
 
     let current = __dirname;
     let currentRePath = path.join(__dirname, "src");
-    if(extname == '.jpg'){
-        debugger;
+    if(extname == '.jpg' || extname == '.svg'){
+        //debugger;
         let diffParts = request.url.split('/');
-        filePath = path.join(__dirname,"resource",diffParts[diffParts.length - 1]);
+        filePath = path.join("./","resource",diffParts[diffParts.length - 1]);
     }
 
     var contentType = 'text/html';
@@ -47,6 +47,9 @@ const server = http.createServer((request, response) => {
             break;
         case '.wav':
             contentType = 'audio/wav';
+            break;
+        case '.svg':
+            contentType = 'image/svg+xml';
             break;
     }
     

@@ -102,21 +102,53 @@ resume{
                 padding: 24px;
                 margin-bottom: 12px;
                 box-sizing: border-box;
+                
+                .card-content{                                 
+                    .education-content{ 
+                        margin-bottom: 18px;
+                        
+                        .degree{
+                            padding: 8px 0px;
 
-                .edu-tag{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                    
-                    img{
-                        height: 30px;
-                        width: 30px;
-                        margin-right: 8px;
+                            .name{    
+                                //color: #369;
+                                color: black;
+                                margin-right: 6px;                           
+                                font-weight: bold;
+                                font-size: 16px;
+                                //font-family: Arial, Helvetica, sans-serif;
+                            }
 
-                        &.nus-logo{
-                            height: 25px;
-                            width: 48px;
+                            .credit{
+                                //color: grey;      
+                                color: #369;             
+                                font-size: 12px;
+                                font-style: italic;
+                            }
+                        }
+
+                        .school{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            
+                            img{
+                                // height: 30px;
+                                // width: 30px;
+                                height: 25px;
+                                width: 25px;
+                                margin-right: 8px;
+
+                                &.nus-logo{
+                                    height: 25px;
+                                    width: 48px;
+                                }
+                            }
+
+                            span{
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -127,6 +159,23 @@ resume{
                 padding: 24px;
                 margin-bottom: 12px;
                 box-sizing: border-box;
+
+                .card-content{
+                    div{
+                        margin-bottom: 12px;
+                    }
+
+                    label{
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: black;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        font-style: italic;
+                    }
+                }
            }
 
            .experience{
@@ -134,6 +183,47 @@ resume{
                 padding: 24px;
                 margin-bottom: 12px;
                 box-sizing: border-box;
+
+                .company{
+                    margin-bottom: 48px;
+                }
+
+                .company-name{
+                    font-size: 16px;
+                    color: black;
+                    font-weight: bold;
+                    margin-right: 8px;
+                }
+
+                .role{
+                    font-size: 16px;
+                    color: black;
+                    margin-right: 8px;
+                }
+
+                .tenure{
+                    font-size: 14px;
+                    font-style: italic;
+                }
+
+                h5{
+                    padding-left: 24px;
+                    color: #369;
+                }
+
+                p{
+                    font-size: 14px;
+                    padding-left: 32px; 
+                }
+
+                ul{
+                    list-style: circle;
+                }
+
+                .contribution{
+                    padding-left: 32px;
+                    font-size: 14px; 
+                }
            }
        }
    }
@@ -143,4 +233,28 @@ resume{
        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);       
        border-radius: 3px;
    } 
+
+   .card-tag{
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       align-items: center;
+       margin-bottom: 12px;
+
+       h2{
+           margin-right: 12px;
+           color: #db0962;
+       }
+
+       .icon-container{
+           width: 36px;
+           height: 36px;
+
+           .icon{
+               stroke-width: 6px;
+               stroke: #db0962;
+               fill: #db0962;
+           }
+       }
+   }
 }

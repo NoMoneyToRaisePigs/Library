@@ -3,7 +3,7 @@
     <div class="header-navigation-item">
         <div class="item" *ngFor="let item of test.navItems">
             <a [routerLink]="item.url" routerLinkActive="active">
-                <span>{{item.name}}</span>
+                {{item.name}}
             </a>
         </div>
     </div>
