@@ -10,7 +10,8 @@ export class HeaderService{
   logoWidth: number = 200;
   notificationWidth: number = 200;
   navItemWidth: number = 80;
-  
+
+
   testNav: NavBar = {navItems:[]};
 
   constructor() { 

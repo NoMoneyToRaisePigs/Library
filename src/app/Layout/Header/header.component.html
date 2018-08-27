@@ -1,11 +1,28 @@
 <div class="header-container">
-    <div class="logo"></div>
+    <!-- <div class="drawer" (click)="toggleDrawer()"><span>☰</span></div> -->
+    <div class="drawer" (click)="toggleDrawer()"><div [class.open]="isOpen"></div></div>
+    <div class="logo"><img class="" src="picture5.png"/></div>
     <div class="header-navigation-item">
-        <div class="item" *ngFor="let item of test.navItems">
+        <ul>
+            <li class="item" *ngFor="let item of test.navItems">
+                <a [routerLink]="item.url" routerLinkActive="active">
+                    {{item.name}}
+                </a>
+            </li>
+        </ul>
+        <!-- <div class="item" *ngFor="let item of test.navItems">
             <a [routerLink]="item.url" routerLinkActive="active">
                 {{item.name}}
             </a>
-        </div>
+        </div> -->
     </div>
-    <div class="notification"></div>
 </div>
+<div id="drop-back" *ngIf="isOpen" (click)="toggleDrawer()">
+</div>
+<div id="side-bar" [ngClass]="isOpen ? 'open' : 'close'">
+    <div class="nav-wrapper">
+        <div (click)="navTo('/Library')"><a>Library</a></div>
+        <div (click)="navTo('/Resume')"><a routerLink="/Resume" routerLinkActive="active">Resume</a></div>
+    </div>
+</div>
+

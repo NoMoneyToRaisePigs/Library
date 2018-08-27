@@ -19,7 +19,7 @@ const server = http.createServer((request, response) => {
 
     let current = __dirname;
     let currentRePath = path.join(__dirname, "src");
-    if(extname == '.jpg' || extname == '.svg'){
+    if(extname == '.jpg' || extname == '.svg' ||  extname == '.png'){
         //debugger;
         let diffParts = request.url.split('/');
         filePath = path.join("./","resource",diffParts[diffParts.length - 1]);
@@ -50,6 +50,9 @@ const server = http.createServer((request, response) => {
             break;
         case '.svg':
             contentType = 'image/svg+xml';
+            break;
+        case '.ico':
+            contentType = 'image/x-icon';
             break;
     }
     

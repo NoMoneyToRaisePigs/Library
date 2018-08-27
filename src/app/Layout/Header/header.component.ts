@@ -1,4 +1,6 @@
 import {Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { HeaderService } from './header.service';
 import { NavBar, MenuItem } from './header';
 
@@ -13,12 +15,15 @@ export class HeaderComponent implements OnInit{
     // navigationItems: NavigationItem[] = [];
     test: NavBar;
     menu: MenuItem[];
+    isOpen: boolean;
 
     constructor(
         private headerService: HeaderService,
-        private changeDetectorRef: ChangeDetectorRef
+        private changeDetectorRef: ChangeDetectorRef,
+        private router: Router
     ){}
 
+    
     ngOnInit(){
                
         this.headerService.populateMenu();
@@ -33,6 +38,16 @@ export class HeaderComponent implements OnInit{
             this.changeDetectorRef.markForCheck();
             this.changeDetectorRef.detectChanges();
         };
+    }
+
+    toggleDrawer(){
+        //window.alert('xxx');
+        this.isOpen = !this.isOpen;
+    }
+
+    navTo(url: string){
+        this.isOpen = false;
+        this.router.navigate([url]);
     }
 }
 

@@ -23,7 +23,7 @@ const server = http.createServer((request, response) => {
 
     var extname = path.extname(filePath);
 
-    if(extname == '.jpg' || extname == '.svg'){
+    if(extname == '.jpg' || extname == '.svg'  ||  extname == '.png'){
         var diffParts = request.url.split('/');
         //filePath = path.join(__dirname,"resource",diffParts[diffParts.length - 1]);
         filePath = path.join("./","resource",diffParts[diffParts.length - 1]);
@@ -54,6 +54,9 @@ const server = http.createServer((request, response) => {
             break;
         case '.svg':
             contentType = 'image/svg+xml';
+            break;
+        case '.ico':
+            contentType = 'image/x-icon';
             break;
     }
     
