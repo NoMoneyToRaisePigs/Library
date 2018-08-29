@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 263 263" style="width:100px;height:100px;">
+	<g sytle="isolation:isolate;">
+		<g>
+			<g id="Design">
+				<path style="fill:#c3002f;" d="M252.54,127.39A125.28,125.28,0,0,0,67.49,17.32L237.36,187.2A124.68,124.68,0,0,0,252.54,127.39Z"/>
+				<path style="fill:#dd0031;" d="M67.49,17.32A125.26,125.26,0,1,0,237.36,187.2Z"/>
+				<polyline style="fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:20px;" points="82.41 89.39 42.89 131.38 76.9 165.39"/>
+				<polyline style="fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:20px;" points="172.18 165.39 211.69 123.39 177.69 89.39"/>
+				<line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:20px;" x1="144.77" y1="68.85" x2="109.82" y2="185.93"/>
+			</g>
+		</g>
+	</g>
+</svg>
