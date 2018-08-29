@@ -2,28 +2,78 @@ home{
     #hero{
         position: relative;
         height: 500px;
-        max-height: 500px;
-        //background-color: #1976d2;  
-        background: transparent;
+        width:100%;
         overflow: hidden;
 
+
         .background{
-            width: 200%;
-            top:-200px;
             position: absolute;
-            height: 700px;
+            width: 100%;
+            height: 500px;
+
+            top: -200px;
+            left: 0px;
+
             background: linear-gradient(145deg,#0d47a1,#42a5f5);
             transform: skewY(8deg);
+            z-index: -1;
+
+            @media(max-width: 850px){
+                top: -50px;
+                transform: skewY(0deg);
+            }
+
+            @media(max-width: @mobile-max-width){
+                top: -140px;
+            }
         }
 
         .hero-image{
-            position: absolute;
-            top:45%;
-            left:30%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0px auto;
+            width: 100%;
+            box-sizing: border-box;
+            padding-top: 120px;
+            z-index: 100;
+
+            @media(max-width: 850px){
+                flex-direction: column;
+                padding-top: 64px;
+            }
 
             img{
                 width:325px;
                 height: 180px;
+                margin-bottom: 32px;
+
+                @media(max-width: @mobile-max-width){
+                    margin: auto;
+                    width: 220px;
+                    height: 120px;
+                }
+            }
+
+            .text{
+                //width:500px;               
+                font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                font-size: 32px;
+                line-height: 64px;
+                font-weight: 500;
+                color: #fff;
+                word-break: break-word;
+                
+                @media(max-width: 850px){
+                    text-align: center;
+                    width:100%;
+                }
+
+                @media(max-width: @mobile-max-width){
+                    font-size: 24px;
+                    font-weight: 400;
+                }
             }
         }       
     }
