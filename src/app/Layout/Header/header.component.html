@@ -1,13 +1,14 @@
 <div id="header-desktop">
-    <div id="logo-desktop"><img class="" src="logo.png"/></div>
-    <div class="header-navigation-item">
-        <ul>
-            <li class="item" *ngFor="let item of test.navItems">
-                <a [routerLink]="item.url" routerLinkActive="active">
-                    {{item.name}}
-                </a>
-            </li>
-        </ul>
+    <div id="logo-desktop"><img src="logo.png"/></div>
+    <div class="nav-container">
+        <div class="header-navigation-item">
+            <ul>
+                <li class="item" *ngFor="let item of test.navItems"><a [routerLink]="item.url" routerLinkActive="active">{{item.name}}</a></li>
+            </ul>
+        </div>
+        <div class="github-nav">
+            <gf-icon iconId="github"></gf-icon>
+        </div>
     </div>
 </div>
 
