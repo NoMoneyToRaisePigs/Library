@@ -11,5 +11,17 @@ layout{
 
         transition: background-color 0.3s ease-in-out;
     }   
+
+    .body{
+        z-index: 100px;
+
+        @media(min-width: @tablet-min-width){
+            margin-top: 52px;
+        }
+
+        @media(max-width: @mobile-max-width){
+            margin-top: 48px;
+        }        
+    }
 }
 

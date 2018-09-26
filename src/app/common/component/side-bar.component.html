@@ -1,0 +1,10 @@
+<div class="side-bar-container">
+    <div class="menu" *ngFor="let cat of menu">
+        <div class="cat" (click)="expand(cat.id)"><span>{{cat.name}}</span><gf-icon iconId="right-arrow" [class.expanded]="cat.expanded"></gf-icon></div> 
+        <ul [class.expanded]="cat.expanded">
+            <ng-container *ngFor="let sub of cat.items">
+                <li (click)="goto(sub.id)">{{sub.name}}</li>
+            </ng-container>
+        </ul>
+    </div>
+</div>

@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { SideBarService } from '../common/service/side-bar.service';
+import { SideMenu } from '../common/service/interface';
 
 @Component({
     selector:'library',
@@ -7,7 +9,15 @@ import {Component} from '@angular/core';
         templateUrl:'library.component.html',
     //styleUrls:['library.component.css']  // this is trying for Angular-cli Aot
 })
-export class LibraryComponent {
-    constructor(){}
+export class LibraryComponent implements OnInit{
+    menu: SideMenu[];
+
+    constructor(private sideBarService: SideBarService){
+
+    }
+
+    ngOnInit(){
+        this.menu = this.sideBarService.getSideMenu();
+    }
 }
 

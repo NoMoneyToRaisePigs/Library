@@ -15,11 +15,14 @@
 <div id="header-mobile">
     <div id="drawer" (click)="toggleDrawer()"><div [class.open]="isOpen"></div></div>
     <div id="logo-mobile"><img src="logo.png"/></div>
-    <div id="side-bar" [ngClass]="isOpen ? 'open' : 'close'">
-        <div id="nav-wrapper">
-            <div (click)="navTo('/Library')"><a>Library</a></div>
-            <div (click)="navTo('/Resume')"><a routerLink="/Resume" routerLinkActive="active">Resume</a></div>
-        </div>
-    </div>
-    <div id="side-bar-drop-back" *ngIf="isOpen" (click)="toggleDrawer()"></div>
 </div>
+
+<div id="side-bar" [ngClass]="isOpen ? 'open' : 'close'">
+    <gf-side-bar></gf-side-bar>
+    <!-- <div id="nav-wrapper">
+        <div (click)="navTo('/Library')"><a>Library</a></div>
+        <div (click)="navTo('/Resume')"><a routerLink="/Resume" routerLinkActive="active">Resume</a></div>
+    </div> -->
+</div>
+<div id="side-bar-drop-back" *ngIf="isOpen" (click)="toggleDrawer()"></div>
+

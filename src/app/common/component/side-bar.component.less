@@ -1,0 +1,76 @@
+.side-bar-container{
+    padding: 12px 12px 12px 32px;
+
+    .menu{
+        box-sizing: border-box;
+
+        .cat{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 6px 8px 6px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+
+            span{
+                color: #6e6e6e;
+                font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                margin-left: 14px;
+                transition: background-color .2s;
+                text-transform: uppercase;
+            }
+
+            gf-icon{
+                .icon-container{
+                    height: 12px;
+                    width: 12px;
+                    transition: 0.3s;
+                }
+            }
+            gf-icon.expanded{
+                .icon-container{
+                    transform: rotateZ(90deg);
+                }
+            }       
+        }
+
+        .cat:hover{
+            background-color: #dbdbdb;
+        }
+
+        // .cat:hover{
+        //     border-bottom: 1px solid grey;
+        // }
+
+        ul{      
+            max-height: 1px;
+            visibility: hidden;
+            opacity: 0;
+            li{
+                padding: 5px 0px 5px 24px;
+                color: #6e6e6e;
+                font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                margin-left: 12px;
+                text-transform: none;
+                transition: background-color 0.5s;
+                cursor: pointer;
+            }
+
+            li:hover{
+                background-color: #dbdbdb;
+            }
+            transition: max-height 0.8s, visibility 0.5s, opacity 0.5s;
+        }
+
+        ul.expanded{
+            max-height: 1000px;
+            visibility: visible;
+            opacity: 1;
+            transition: max-height 0.8s, visibility 0.5s, opacity 0.5s;
+        }
+    }
+
+}
